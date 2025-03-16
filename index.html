@@ -9,78 +9,30 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
             background-color: #f4f4f4;
         }
-        .top-image {
-            width: 100%;
-            height: auto;
-            max-height: 608px;
-            background: url('top-image.jpg') no-repeat center center;
-            background-size: contain;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .main-container {
-            display: flex;
-            width: 100%;
+        .container {
+            display: grid;
+            grid-template-columns: 320px auto;
+            grid-template-areas: "sidebar content";
+            min-height: 100vh;
         }
         .sidebar {
-            width: 320px;
+            grid-area: sidebar;
             background-color: #2ecc71;
             color: white;
             padding: 20px;
-            text-align: center;
             position: fixed;
+            width: 320px;
             height: 100vh;
-            top: 0;
-            left: 0;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .sidebar img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .sidebar h2 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-        .sidebar p {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .sidebar a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            margin: 5px 0;
-            background-color: #27ae60;
-            border-radius: 5px;
-        }
-        .sidebar a:hover {
-            background-color: #219150;
-        }
-        .sidebar .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .sidebar .social-icons a {
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-        }
         .content {
-            margin-left: 350px;
+            grid-area: content;
             padding: 20px;
+            margin-left: 320px;
             max-width: 800px;
         }
         .section {
@@ -92,36 +44,9 @@
             color: #333;
         }
     </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="top-image">
-        <img src="top-image.jpg" alt="Top Banner" style="width: 100%; max-height: 608px; object-fit: contain;">
-    </div>
-    <div class="main-container">
-        <div class="sidebar">
-            <div>
-                <img src="profile.jpg" alt="Mohammad Razaur Shaon">
-                <h2>Mohammad Razaur Rahman Shaon, Ph.D., PE, PTOE, RSP</h2>
-                <p>Research Assistant Professor</p>
-                <p>Center for Transportation Research</p>
-                <p>University of Tennessee-Knoxville</p>
-                <p>309 Conference Center Bldg.</p>
-                <p>Knoxville, TN 37996-4133</p>
-            </div>
-            <div>
-                <a href="#bio">Short Bio</a>
-                <a href="#education">Education</a>
-                <a href="#research">Research Interests</a>
-                <a href="#experience">Research Experience</a>
-                <a href="#publications">Publications</a>
-                <a href="#contact">Contact Me</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://scholar.google.com" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://www.linkedin.com/in/mohammad-razaur-shaon/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
+    <div class="container">
         <div class="content">
             <div class="section" id="bio">
                 <h2>Short Bio</h2>
@@ -150,12 +75,57 @@
                 <p>Assistant Research Professor, University of Tennessee Knoxville</p>
                 <p>Associate Research Scientist, University of Connecticut</p>
             </div>
+            <div class="section" id="funded-projects">
+                <h2>Funded Projects</h2>
+                <ul>
+                    <li>P.I., Development of a Truck Parking Information Management System for Real-time Dissemination of Commercial Vehicle Parking Information; Federal Motor Carrier Safety Administration; 11/2022-11/2025; Budget: $1,726,538.</li>
+                    <li>Co-P.I., NCHRP 15-82- Relationship of Speed, Roadway Geometrics, and Crashes on High-Speed Rural Highways; National Cooperative Highway Research Program; 05/2024-11/2026; Budget: $750,000.</li>
+                    <li>Co-P.I., NCHRP 03-142- Evaluating the Impacts of Real-Time Warnings and Variable Speed Limits on Safety and Travel Reliability during Weather Events; National Cooperative Highway Research Program; 08/2022-08/2025; Budget: $400,000.</li>
+                    <li>P.I., Implementation of Highway Safety Manual Based Predictive Safety Analysis in the MAG Region; Maricopa Association of Government, Arizona; 08/2023-07/2024; Budget: $149,051.</li>
+                    <li>P.I., Automated Vehicle and Pavement Marking Evaluation in Connecticut; Connecticut Department of Transportation, Bureau of Policy and Planning; 12/2021-09/2023; Budget: $234,226.</li>
+                    <li>P.I., Implementation and Evaluation of Aira Access Pilot Run in Connecticut; Connecticut Department of Transportation, Bureau of Policy and Planning; 05/2021-01/2023; Budget: $394,288.</li>
+                    <li>Safety Analysis Team Lead, Further Advancing the Transportation Safety Analysis Capabilities of the Connecticut Department of Transportation; Connecticut Department of Transportation; 08/01/2020 – 07/31/2025; Budget: $7,258,813.</li>
+                    <li>Lead Researcher, Advancing the Behavioral Safety Analytic Tools Capabilities of the Connecticut Department of Transportation; United States Department of Transportation: Office of the Secretary of Transportation; 09/2020- 09/2021; Budget: $453,000.</li>
+                    <li>Co-P.I., Evaluation of Emerging Transportation Technologies: Case Studies in Phoenix and Chandler; Maricopa Association of Government; 01/2020-01/2021; Budget: $84,518.</li>
+                    <li>Co-P.I., Tech Support for Transportation Network Management System; Pima County Department of Transportation, 05/2020 – 06/2021; Budget: $50,000.</li>
+                    <li>Lead Researcher and Project Leader, Automated Data Collection and Analysis for Arterial Traffic Operations – Phase 1 & Phase 2; Town of Marana, 09/2020-08/2021; Budget: $60,000.</li>
+                    <li>Lead Researcher and Project Leader, Data Analytics for Traffic Signal Optimization; Pima County DOT, 08/2019 – 10/2020; Budget: $150,000.</li>
+                    <li>Lead Researcher and Project Leader, Multi-Criteria Evaluation of Advanced Traffic Management Systems (ATMS); City of Phoenix DOT, 08/2019- 06/2020; Budget: $78,500.</li>
+                    <li>Lead researcher, Identifying Highly Correlated Variables Relating to the Potential Causes of Reportable Wisconsin Traffic Crashes; Federal Highway Administration/ Wisconsin Department of Transportation; 09/2016 – 07/2019.</li>
+                    <li>Lead researcher, SHRP2 IAP Round 7, Application of SHRP2 Reliability and Analysis Tool Bundle for Wisconsin Department of Transportation; Federal Highway Administration; 01/2017 – 07/2013.</li>
+                    <li>Researcher, Wisconsin Traffic Sensor Data Quality Improvement; Wisconsin Department of Transportation; 06/2017 – 08/2019.</li>
+                    <li>Lead researcher, Evaluation of Wisconsin High Visibility Enforcement Program; Wisconsin Department of Transportation; 12/2015-10/2016.</li>
+                    <li>Lead Researcher, Calibration of Highway Safety Manual Predictive Methods for State and Local Rural Highways; South Dakota DOT/ Mountain Plain Consortium; 10/2013 – 01/2015.</li>
+                    <li>Researcher, Developing A Pavement Management System for Local and Small Communities; City of Madison/South Dakota DOT; 01/2015 – 06/2015.</li>
+                </ul>
+            </div>
+            </div>
             <div class="section" id="publications">
                 <h2>Publications</h2>
                 <ul>
-                    <li>Shaon, M.R.R., Zhao, S., Wang, K., & Jackson, E. (2023). Developing a Data-Driven Network Screening Procedure for Systemic Safety Approach.</li>
-                    <li>Luo, X., Li, X., Shaon, M.R.R., & Zhang, Y. (2023). Multi-lane-merging Strategy for Connected Automated Vehicles on Freeway Ramps.</li>
+                    <li>Shaon, M.R.R., Zhao, S., Wang, K., & Jackson, E. (2023). Developing a Data-Driven Network Screening Procedure for Systemic Safety Approach. Transportation Research Record, p.03611981231179702.</li>
+                    <li>Luo, X., Li, X., Shaon, M.R.R., & Zhang, Y. (2023). Multi-lane-merging Strategy for Connected Automated Vehicles on Freeway Ramps. Transportmetrica B: transport dynamics, 11(1), pp.127-145.</li>
+                    <li>Cottam, A., Li, X., Shaon, M.R.R., & Wu, Y.J. (2023). Investigating the Impacts of E-scooters on a Bike-sharing System in Tucson, Arizona with a No Ride Zone. International Journal of Sustainable Transportation, pp.1-14.</li>
+                    <li>Ma, X., Cottam, A., Shaon, M.R.R., & Wu, Y.J. (2023). A Transfer Learning Framework for Proactive Ramp Metering Performance Assessment. arXiv preprint arXiv:2308.03542.</li>
+                    <li>Rezwana, S., Shaon, M.R.R., & Lownes, N. (2023). Understanding the Changes in Public Perception toward Autonomous Vehicles over Time. In International Conference on Transportation and Development (pp. 361-372).</li>
+                    <li>Xia, L., Li, X., Shaon, M. R. R., Wu, Y. J., & Jiang, X. (2023). Arterial Signal Offset Optimization using Crowdsourced Speed Data. Transportation research record, 2677(2), 1633-1642.</li>
+                    <li>Wang, K., Shirani-Bidabadi, N., Shaon, M.R.R., Zhao, S., & Jackson, E. (2021). Correlated mixed logit modeling with heterogeneity in means for crash severity and surrogate measure with temporal instability. Accident Analysis & Prevention, 160, 106332.</li>
+                    <li>Shaon, M.R.R., Wu, Y.J., & Ramos, S. (2021). Quantitative Evaluation of Advanced Traffic Management Systems using Analytic Hierarchy Process. Transportation Research Record, 2675(12), 610-621.</li>
+                    <li>Shaon, M. R. R., & Qin, X. (2020). Crash data-based Investigation into How Injury Severity is Affected by Driver Errors. Transportation research record, 2674(5), 452-464.</li>
+                    <li>Shaon, M. R. R., Qin, X., Afghari, A. P., Washington, S., & Haque, M. M. (2019). Incorporating Behavioral Variables into Crash Count Prediction by Severity: A Multivariate Multiple Risk Source Approach. Accident Analysis & Prevention, 129, 277-288.</li>
+                    <li>Qin, X., Chen, Z., & Shaon, M. R. R. (2019). Developing Jurisdiction-specific SPFs and Crash Severity Proportion Functions for Rural two-lane, two-way Intersections. Journal of Transportation Safety & Security, 11(6), 629-641.</li>
+                    <li>Al-Mahameed, F. J., Qin, X., Schneider, R. J., & Shaon, M. R. R. (2019). Analyzing Pedestrian and Bicyclist Crashes at the Corridor level: Structural Equation Modeling Approach. Transportation research record, 2673(7), 308-318.</li>
+                    <li>Shaon, M. R. R., & Qin, X. (2016). Use of Mixed Distribution Generalized Linear Models to Quantify Safety Effects of Rural Roadway Features. Transportation Research Record, 2583(1), 134-141.</li>
+                    <li>Joshi, M., Shaon, M.R.R., Rezwana, S., Wang, K., Ivan, J., & Jackson, E. (2024). Developing a Comprehensive Vulnerable Road User Safety Screening Method using Multi-level Data. Transportation Research Record, In-Production.</li>
+                    <li>M.R.R. Shaon, Qin, X., & Jackson, E. (2024). Modeling The Effects of Driver Error And Impairment On Crash Injury Severity. Under Review for Publication in Accident Analysis and Prevention.</li>
                 </ul>
+            </div>
+            </div>
+            <div class="section" id="contact">
+                <h2>Contact Me</h2>
+                <p>Email: <a href="mailto:mshaon@utk.edu">mshaon@utk.edu</a></p>
+                <p>GitHub: <a href="https://github.com/mrrshaon06" target="_blank">github.com/mrrshaon06</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammad-razaur-shaon/" target="_blank">LinkedIn Profile</a></p>
             </div>
         </div>
     </div>
