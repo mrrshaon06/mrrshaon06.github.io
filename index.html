@@ -15,9 +15,14 @@
         }
         .top-image {
             width: 100%;
-            height: 250px;
+            height: auto;
+            max-height: 608px;
             background: url('top-image.jpg') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
+            background-color: #ddd; /* Fallback color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .main-container {
             display: flex;
@@ -76,7 +81,9 @@
     </style>
 </head>
 <body>
-    <div class="top-image"></div>
+    <div class="top-image">
+        <img src="top-image.jpg" alt="Top Banner" style="width: 100%; max-height: 608px; object-fit: contain;">
+    </div>
     <div class="main-container">
         <div class="content">
             <div class="section" id="bio">
