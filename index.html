@@ -10,19 +10,15 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: 320px auto;
-            grid-template-areas: "sidebar content";
-            min-height: 100vh;
+            display: flex;
         }
         .sidebar {
-            grid-area: sidebar;
             background-color: #2ecc71;
             color: white;
             padding: 20px;
             position: fixed;
+            top: 0;
+            left: 0;
             width: 320px;
             height: 100vh;
             display: flex;
@@ -30,6 +26,7 @@
             justify-content: flex-start;
             align-items: center;
             text-align: center;
+            overflow-y: auto;
         }
         .sidebar img {
             width: 150px;
@@ -54,14 +51,14 @@
             background-color: #27ae60;
             border-radius: 5px;
             width: 90%;
+            text-align: center;
         }
         .sidebar a:hover {
             background-color: #219150;
         }
         .content {
-            grid-area: content;
+            margin-left: 340px;
             padding: 20px;
-            margin-left: 320px;
             max-width: 800px;
         }
         .section {
@@ -80,106 +77,117 @@
     </style>
 </head>
 <body>
-    <img src="top-image.jpg" alt="Cover Photo" class="top-image">
-    <div class="container">
-        <div class="sidebar">
-            <img src="profile.jpg" alt="Mohammad Razaur Shaon">
-            <h2>Mohammad Razaur Rahman Shaon, Ph.D., PE, PTOE, RSP</h2>
-            <p>Research Assistant Professor</p>
-            <p>Center for Transportation Research</p>
-            <p>University of Tennessee-Knoxville</p>
-            <p>309 Conference Center Bldg.</p>
-            <p>Knoxville, TN 37996-4133</p>
-            <a href="#bio">Short Bio</a>
-            <a href="#education">Education</a>
-            <a href="#research">Research Interests</a>
-            <a href="#experience">Research Experience</a>
-            <a href="#funded-projects">Funded Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact Me</a>
+    <div class="sidebar">
+        <img src="profile.jpg" alt="Mohammad Razaur Shaon">
+        <h2>Mohammad Razaur Rahman Shaon, Ph.D., PE, PTOE, RSP</h2>
+        <p>Research Assistant Professor</p>
+        <p>Center for Transportation Research</p>
+        <p>University of Tennessee-Knoxville</p>
+        <p>309 Conference Center Bldg.</p>
+        <p>Knoxville, TN 37996-4133</p>
+        <a href="#bio">Short Bio</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research Interests</a>
+        <a href="#experience">Research Experience</a>
+        <a href="#funded-projects">Funded Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact Me</a>
+    </div>
+    <div class="content">
+        <img src="top-image.jpg" alt="Cover Photo" class="top-image">
+        <div class="section" id="bio">
+            <h2>Short Bio</h2>
+            <p>Dr. Mohammad Razaur Shaon is a highly motivated and results-oriented transportation engineering academic with extensive experience in applying statistical and machine learning techniques, spatial data analytics to perform complex transportation data analyses and develop effective solutions...</p>
         </div>
-        <div class="content">
-            <div class="section" id="bio">
-                <h2>Short Bio</h2>
-                <p>Dr. Mohammad Razaur Shaon is a highly motivated and results-oriented transportation engineering academic with extensive experience in applying statistical and machine learning techniques, spatial data analytics to perform complex transportation data analyses and develop effective solutions. Led research initiatives in the domain of connected and autonomous vehicles (CAVs), utilizing Virtual Reality technology, freight analysis, and safety and mobility-related analysis. Proposed statistical and econometric models to incorporate driver behavior related factors into crash analytics. Led several Federal and state sponsored research projects. Proven ability to lead and collaborate on multi-disciplinary research projects, analyze complex datasets, and develop data-driven solutions to improve transportation safety and mobility.</p>
-            </div>
-            <div class="section" id="education">
-                <h2>Education</h2>
-                <ul>
-                    <li>Ph.D. in Civil & Environmental Engineering, University of Wisconsin-Milwaukee (2019)</li>
-                    <li>M.Sc. in Civil & Environmental Engineering, South Dakota State University (2015)</li>
-                    <li>B.Sc. in Civil Engineering, Bangladesh University of Engineering and Technology (2012)</li>
-                </ul>
-            </div>
-            <div class="section" id="research">
-                <h2>Research Interests</h2>
-                <ul>
-                    <li>Highway Safety and Crash Modeling</li>
-                    <li>Machine Learning in Transportation</li>
-                    <li>Statistical and Econometric Modeling</li>
-                    <li>Intelligent Transportation Systems</li>
-                    <li>GIS and Spatial Data Analysis</li>
-                </ul>
-            </div>
-            <div class="section" id="experience">
-                <h2>Research Experience</h2>
-                <p>Assistant Research Professor, University of Tennessee Knoxville</p>
-                <p>Associate Research Scientist, University of Connecticut</p>
-            </div>
-            <div class="section" id="funded-projects">
-                <h2>Funded Projects</h2>
-                <ul>
-                    <li>P.I., Development of a Truck Parking Information Management System for Real-time Dissemination of Commercial Vehicle Parking Information; Federal Motor Carrier Safety Administration; 11/2022-11/2025; Budget: $1,726,538.</li>
-                    <li>Co-P.I., NCHRP 15-82- Relationship of Speed, Roadway Geometrics, and Crashes on High-Speed Rural Highways; National Cooperative Highway Research Program; 05/2024-11/2026; Budget: $750,000.</li>
-                    <li>Co-P.I., NCHRP 03-142- Evaluating the Impacts of Real-Time Warnings and Variable Speed Limits on Safety and Travel Reliability during Weather Events; National Cooperative Highway Research Program; 08/2022-08/2025; Budget: $400,000.</li>
-                    <li>P.I., Implementation of Highway Safety Manual Based Predictive Safety Analysis in the MAG Region; Maricopa Association of Government, Arizona; 08/2023-07/2024; Budget: $149,051.</li>
-                    <li>P.I., Automated Vehicle and Pavement Marking Evaluation in Connecticut; Connecticut Department of Transportation, Bureau of Policy and Planning; 12/2021-09/2023; Budget: $234,226.</li>
-                    <li>P.I., Implementation and Evaluation of Aira Access Pilot Run in Connecticut; Connecticut Department of Transportation, Bureau of Policy and Planning; 05/2021-01/2023; Budget: $394,288.</li>
-                    <li>Safety Analysis Team Lead, Further Advancing the Transportation Safety Analysis Capabilities of the Connecticut Department of Transportation; Connecticut Department of Transportation; 08/01/2020 – 07/31/2025; Budget: $7,258,813.</li>
-					<li>Lead Researcher, Advancing the Behavioral Safety Analytic Tools Capabilities of the Connecticut Department of Transportation; United States Department of Transportation: Office of the Secretary of Transportation; 09/2020- 09/2021; Budget: $453,000.</li>
-					<li>Co-P.I., Evaluation of Emerging Transportation Technologies: Case Studies in Phoenix and Chandler; Maricopa Association of Government; 01/2020-01/2021; Budget: $84,518.</li>
-					<li>Co-P.I., Tech Support for Transportation Network Management System; Pima County Department of Transportation, 05/2020 – 06/2021; Budget: $50,000.</li>
-					<li>Lead Researcher and Project Leader, Automated Data Collection and Analysis for Arterial Traffic Operations – Phase 1 & Phase 2; Town of Marana, 09/2020-08/2021; Budget: $60,000.</li>
-					<li>Lead Researcher and Project Leader, Data Analytics for Traffic Signal Optimization; Pima County DOT, 08/2019 – 10/2020; Budget: $150,000.</li>
-					<li>Lead Researcher and Project Leader, Multi-Criteria Evaluation of Advanced Traffic Management Systems (ATMS); City of Phoenix DOT, 08/2019- 06/2020; Budget: $78,500.</li>
-					<li>Lead researcher, Identifying Highly Correlated Variables Relating to the Potential Causes of Reportable Wisconsin Traffic Crashes; Federal Highway Administration/ Wisconsin Department of Transportation; 09/2016 – 07/2019.</li>
-					<li>Lead researcher, SHRP2 IAP Round 7, Application of SHRP2 Reliability and Analysis Tool Bundle for Wisconsin Department of Transportation; Federal Highway Administration; 01/2017 – 07/2013.</li>
-					<li>Researcher, Wisconsin Traffic Sensor Data Quality Improvement; Wisconsin Department of Transportation; 06/2017 – 08/2019.</li>
-					<li>Lead researcher, Evaluation of Wisconsin High Visibility Enforcement Program; Wisconsin Department of Transportation; 12/2015-10/2016.</li>
-					<li>Lead Researcher, Calibration of Highway Safety Manual Predictive Methods for State and Local Rural Highways; South Dakota DOT/ Mountain Plain Consortium; 10/2013 – 01/2015.</li>
-					<li>Researcher, Developing A Pavement Management System for Local and Small Communities; City of Madison/South Dakota DOT; 01/2015 – 06/2015.</li>
-                </ul>
-            </div>
-            <div class="section" id="publications">
-                <h2>Peer-Reviewed Publications</h2>
-                <ul>
-                    <li>Shaon, M.R.R., Zhao, S., Wang, K., & Jackson, E. (2023). Developing a Data-Driven Network Screening Procedure for Systemic Safety Approach. Transportation Research Record, p.03611981231179702.</li>
-                    <li>Luo, X., Li, X., Shaon, M.R.R., & Zhang, Y. (2023). Multi-lane-merging Strategy for Connected Automated Vehicles on Freeway Ramps. Transportmetrica B: transport dynamics, 11(1), pp.127-145.</li>
-                    <li>Cottam, A., Li, X., Shaon, M.R.R., & Wu, Y.J. (2023). Investigating the Impacts of E-scooters on a Bike-sharing System in Tucson, Arizona with a No Ride Zone. International Journal of Sustainable Transportation, pp.1-14.</li>
-                    <li>Ma, X., Cottam, A., Shaon, M.R.R., & Wu, Y.J. (2023). A Transfer Learning Framework for Proactive Ramp Metering Performance Assessment. arXiv preprint arXiv:2308.03542.</li>
-                    <li>Rezwana, S., Shaon, M.R.R., & Lownes, N. (2023). Understanding the Changes in Public Perception toward Autonomous Vehicles over Time. In International Conference on Transportation and Development (pp. 361-372).</li>
-                    <li>Xia, L., Li, X., Shaon, M. R. R., Wu, Y. J., & Jiang, X. (2023). Arterial Signal Offset Optimization using Crowdsourced Speed Data. Transportation research record, 2677(2), 1633-1642.</li>
-                    <li>Wang, K., Shirani-Bidabadi, N., Shaon, M.R.R., Zhao, S., & Jackson, E. (2021). Correlated mixed logit modeling with heterogeneity in means for crash severity and surrogate measure with temporal instability. Accident Analysis & Prevention, 160, 106332.</li>
-                    <li>Shaon, M.R.R., Wu, Y.J., & Ramos, S. (2021). Quantitative Evaluation of Advanced Traffic Management Systems using Analytic Hierarchy Process. Transportation Research Record, 2675(12), 610-621.</li>
-                    <li>Shaon, M. R. R., & Qin, X. (2020). Crash data-based Investigation into How Injury Severity is Affected by Driver Errors. Transportation research record, 2674(5), 452-464.</li>
-                    <li>Shaon, M. R. R., Qin, X., Afghari, A. P., Washington, S., & Haque, M. M. (2019). Incorporating Behavioral Variables into Crash Count Prediction by Severity: A Multivariate Multiple Risk Source Approach. Accident Analysis & Prevention, 129, 277-288.</li>
-                    <li>Qin, X., Chen, Z., & Shaon, M. R. R. (2019). Developing Jurisdiction-specific SPFs and Crash Severity Proportion Functions for Rural two-lane, two-way Intersections. Journal of Transportation Safety & Security, 11(6), 629-641.</li>
-                    <li>Al-Mahameed, F. J., Qin, X., Schneider, R. J., & Shaon, M. R. R. (2019). Analyzing Pedestrian and Bicyclist Crashes at the Corridor level: Structural Equation Modeling Approach. Transportation research record, 2673(7), 308-318.</li>
-                    <li>Shaon, M. R. R., Qin, X., Shirazi, M., Lord, D., & Geedipally, S. R. (2018). Developing a Random Parameters Negative Binomial-Lindley Model to Analyze Highly Over-dispersed Crash Count Data. Analytic methods in accident research, 18, 33-44.</li>
-                    <li>Shaon, M. R. R., Qin, X., Chen, Z., & Zhang, J. (2018). Exploration of Contributing Factors related to Driver Errors on Highway Segments. Transportation research record, 2672(38), 22-34.</li>
-                    <li>Shaon, M. R. R., & Qin, X. (2016). Use of Mixed Distribution Generalized Linear Models to Quantify Safety Effects of Rural Roadway Features. Transportation Research Record, 2583(1), 134-141.</li>
-                    <li>Qin, X., Shaon, M. R. R., & Chen, Z. (2016). Developing Analytical Procedures for Calibrating the Highway Safety Manual Predictive Methods. Transportation Research Record, 2583(1), 91-98.</li>
-                    <li>Joshi, M., Shaon, M.R.R., Rezwana, S., Wang, K., Ivan, J., & Jackson, E. (2024). Developing a Comprehensive Vulnerable Road User Safety Screening Method using Multi-level Data. Transportation Research Record, In-Production.</li>
-                    <li>M.R.R. Shaon, Qin, X., & Jackson, E. (2024). Modeling The Effects of Driver Error And Impairment On Crash Injury Severity. Under Review for Publication in Accident Analysis and Prevention.</li>
-                </ul>
-            </div>
-            <div class="section" id="contact">
-                <h2>Contact Me</h2>
-                <p>Email: <a href="mailto:mshaon@utk.edu">mshaon@utk.edu</a></p>
-                <p>GitHub: <a href="https://github.com/mrrshaon06" target="_blank">github.com/mrrshaon06</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammad-razaur-shaon/" target="_blank">LinkedIn Profile</a></p>
-            </div>
+        <div class="section" id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>Ph.D. in Civil & Environmental Engineering, University of Wisconsin-Milwaukee (2019)</li>
+                <li>M.Sc. in Civil & Environmental Engineering, South Dakota State University (2015)</li>
+                <li>B.Sc. in Civil Engineering, Bangladesh University of Engineering and Technology (2012)</li>
+            </ul>
         </div>
+        <div class="section" id="research">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Highway Safety and Crash Modeling</li>
+                <li>Machine Learning in Transportation</li>
+                <li>Statistical and Econometric Modeling</li>
+                <li>Intelligent Transportation Systems</li>
+                <li>GIS and Spatial Data Analysis</li>
+            </ul>
+        </div>
+        <div class="section" id="experience">
+            <h2>Research Experience</h2>
+            <p>Assistant Research Professor, University of Tennessee Knoxville</p>
+            <p>Associate Research Scientist, University of Connecticut</p>
+        </div>
+        <div class="section" id="funded-projects">
+            <h2>Funded Projects</h2>
+            <ul>
+                <li>P.I., Development of a Truck Parking Information Management System for Real-time Dissemination of Commercial Vehicle Parking Information; Federal Motor Carrier Safety Administration; 11/2022-11/2025; Budget: $1,726,538.</li>
+                <li>Co-P.I., NCHRP 15-82- Relationship of Speed, Roadway Geometrics, and Crashes on High-Speed Rural Highways; National Cooperative Highway Research Program; 05/2024-11/2026; Budget: $750,000.</li>
+                <li>Co-P.I., NCHRP 03-142- Evaluating the Impacts of Real-Time Warnings and Variable Speed Limits on Safety and Travel Reliability during Weather Events; National Cooperative Highway Research Program; 08/2022-08/2025; Budget: $400,000.</li>
+                <li>P.I., Implementation of Highway Safety Manual Based Predictive Safety Analysis in the MAG Region; Maricopa Association of Government, Arizona; 08/2023-07/2024; Budget: $149,051.</li>
+                <li>P.I., Automated Vehicle and Pavement Marking Evaluation in Connecticut; Connecticut Department of Transportation, Bureau of Policy and Planning; 12/2021-09/2023; Budget: $234,226.</li>
+                <li>P.I., Implementation and Evaluation of Aira Access Pilot Run in Connecticut; Connecticut Department of Transportation, Bureau of Policy and Planning; 05/2021-01/2023; Budget: $394,288.</li>
+                <li>Safety Analysis Team Lead, Further Advancing the Transportation Safety Analysis Capabilities of the Connecticut Department of Transportation; Connecticut Department of Transportation; 08/01/2020 – 07/31/2025; Budget: $7,258,813.</li>
+				<li>Lead Researcher, Advancing the Behavioral Safety Analytic Tools Capabilities of the Connecticut Department of Transportation; United States Department of Transportation: Office of the Secretary of Transportation; 09/2020- 09/2021; Budget: $453,000.</li>
+				<li>Co-P.I., Evaluation of Emerging Transportation Technologies: Case Studies in Phoenix and Chandler; Maricopa Association of Government; 01/2020-01/2021; Budget: $84,518.</li>
+				<li>Co-P.I., Tech Support for Transportation Network Management System; Pima County Department of Transportation, 05/2020 – 06/2021; Budget: $50,000.</li>
+				<li>Lead Researcher and Project Leader, Automated Data Collection and Analysis for Arterial Traffic Operations – Phase 1 & Phase 2; Town of Marana, 09/2020-08/2021; Budget: $60,000.</li>
+				<li>Lead Researcher and Project Leader, Data Analytics for Traffic Signal Optimization; Pima County DOT, 08/2019 – 10/2020; Budget: $150,000.</li>
+				<li>Lead Researcher and Project Leader, Multi-Criteria Evaluation of Advanced Traffic Management Systems (ATMS); City of Phoenix DOT, 08/2019- 06/2020; Budget: $78,500.</li>
+				<li>Lead researcher, Identifying Highly Correlated Variables Relating to the Potential Causes of Reportable Wisconsin Traffic Crashes; Federal Highway Administration/ Wisconsin Department of Transportation; 09/2016 – 07/2019.</li>
+				<li>Lead researcher, SHRP2 IAP Round 7, Application of SHRP2 Reliability and Analysis Tool Bundle for Wisconsin Department of Transportation; Federal Highway Administration; 01/2017 – 07/2013.</li>
+				<li>Researcher, Wisconsin Traffic Sensor Data Quality Improvement; Wisconsin Department of Transportation; 06/2017 – 08/2019.</li>
+				<li>Lead researcher, Evaluation of Wisconsin High Visibility Enforcement Program; Wisconsin Department of Transportation; 12/2015-10/2016.</li>
+				<li>Lead Researcher, Calibration of Highway Safety Manual Predictive Methods for State and Local Rural Highways; South Dakota DOT/ Mountain Plain Consortium; 10/2013 – 01/2015.</li>
+				<li>Researcher, Developing A Pavement Management System for Local and Small Communities; City of Madison/South Dakota DOT; 01/2015 – 06/2015.</li>
+            </ul>
+        </div>
+        <div class="section" id="publications">
+            <h2>Peer-Reviewed Publications</h2>
+            <ul>
+                <li>Shaon, M.R.R., Zhao, S., Wang, K., & Jackson, E. (2023). Developing a Data-Driven Network Screening Procedure for Systemic Safety Approach. Transportation Research Record, p.03611981231179702.</li>
+                <li>Luo, X., Li, X., Shaon, M.R.R., & Zhang, Y. (2023). Multi-lane-merging Strategy for Connected Automated Vehicles on Freeway Ramps. Transportmetrica B: transport dynamics, 11(1), pp.127-145.</li>
+                <li>Cottam, A., Li, X., Shaon, M.R.R., & Wu, Y.J. (2023). Investigating the Impacts of E-scooters on a Bike-sharing System in Tucson, Arizona with a No Ride Zone. International Journal of Sustainable Transportation, pp.1-14.</li>
+                <li>Ma, X., Cottam, A., Shaon, M.R.R., & Wu, Y.J. (2023). A Transfer Learning Framework for Proactive Ramp Metering Performance Assessment. arXiv preprint arXiv:2308.03542.</li>
+                <li>Rezwana, S., Shaon, M.R.R., & Lownes, N. (2023). Understanding the Changes in Public Perception toward Autonomous Vehicles over Time. In International Conference on Transportation and Development (pp. 361-372).</li>
+                <li>Xia, L., Li, X., Shaon, M. R. R., Wu, Y. J., & Jiang, X. (2023). Arterial Signal Offset Optimization using Crowdsourced Speed Data. Transportation research record, 2677(2), 1633-1642.</li>
+                <li>Wang, K., Shirani-Bidabadi, N., Shaon, M.R.R., Zhao, S., & Jackson, E. (2021). Correlated mixed logit modeling with heterogeneity in means for crash severity and surrogate measure with temporal instability. Accident Analysis & Prevention, 160, 106332.</li>
+                <li>Shaon, M.R.R., Wu, Y.J., & Ramos, S. (2021). Quantitative Evaluation of Advanced Traffic Management Systems using Analytic Hierarchy Process. Transportation Research Record, 2675(12), 610-621.</li>
+                <li>Shaon, M. R. R., & Qin, X. (2020). Crash data-based Investigation into How Injury Severity is Affected by Driver Errors. Transportation research record, 2674(5), 452-464.</li>
+                <li>Shaon, M. R. R., Qin, X., Afghari, A. P., Washington, S., & Haque, M. M. (2019). Incorporating Behavioral Variables into Crash Count Prediction by Severity: A Multivariate Multiple Risk Source Approach. Accident Analysis & Prevention, 129, 277-288.</li>
+                <li>Qin, X., Chen, Z., & Shaon, M. R. R. (2019). Developing Jurisdiction-specific SPFs and Crash Severity Proportion Functions for Rural two-lane, two-way Intersections. Journal of Transportation Safety & Security, 11(6), 629-641.</li>
+                <li>Al-Mahameed, F. J., Qin, X., Schneider, R. J., & Shaon, M. R. R. (2019). Analyzing Pedestrian and Bicyclist Crashes at the Corridor level: Structural Equation Modeling Approach. Transportation research record, 2673(7), 308-318.</li>
+                <li>Shaon, M. R. R., Qin, X., Shirazi, M., Lord, D., & Geedipally, S. R. (2018). Developing a Random Parameters Negative Binomial-Lindley Model to Analyze Highly Over-dispersed Crash Count Data. Analytic methods in accident research, 18, 33-44.</li>
+                <li>Shaon, M. R. R., Qin, X., Chen, Z., & Zhang, J. (2018). Exploration of Contributing Factors related to Driver Errors on Highway Segments. Transportation research record, 2672(38), 22-34.</li>
+                <li>Shaon, M. R. R., & Qin, X. (2016). Use of Mixed Distribution Generalized Linear Models to Quantify Safety Effects of Rural Roadway Features. Transportation Research Record, 2583(1), 134-141.</li>
+                <li>Qin, X., Shaon, M. R. R., & Chen, Z. (2016). Developing Analytical Procedures for Calibrating the Highway Safety Manual Predictive Methods. Transportation Research Record, 2583(1), 91-98.</li>
+                <li>Joshi, M., Shaon, M.R.R., Rezwana, S., Wang, K., Ivan, J., & Jackson, E. (2024). Developing a Comprehensive Vulnerable Road User Safety Screening Method using Multi-level Data. Transportation Research Record, In-Production.</li>
+                <li>M.R.R. Shaon, Qin, X., & Jackson, E. (2024). Modeling The Effects of Driver Error And Impairment On Crash Injury Severity. Under Review for Publication in Accident Analysis and Prevention.</li>
+            </ul>
+        </div>
+       <div class="section" id="contact">
+			<h2>Contact Me</h2>
+			<form class="contact-form" action="#" method="POST">
+			<!-- Name & Email Row -->
+			<div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <!-- Subject Row -->
+        <input type="text" name="subject" placeholder="Subject" required>
+        <!-- Message Box -->
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <!-- Buttons Row -->
+        <div class="form-row">
+            <button type="submit">Send Message</button>
+            <button type="reset">Reset Form</button>
+        </div>
+    </form>
+</div>
     </div>
 </body>
 </html>
