@@ -19,7 +19,7 @@
             max-height: 608px;
             background: url('top-image.jpg') no-repeat center center;
             background-size: contain;
-            background-color: #ddd; /* Fallback color */
+            background-color: #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -79,33 +79,41 @@
             color: #333;
         }
         .contact-form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
             max-width: 600px;
-            margin: 20px auto;
+            margin: 40px auto;
+            text-align: left;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
+            font-style: italic;
         }
         .contact-form button {
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
         }
         .send-btn {
             background-color: #2ecc71;
             color: white;
         }
+        .send-btn:hover {
+            background-color: #27ae60;
+        }
         .reset-btn {
             background-color: #aaa;
             color: white;
+        }
+        .reset-btn:hover {
+            background-color: #888;
         }
     </style>
 </head>
@@ -117,7 +125,7 @@
         <div class="content">
             <div class="section" id="bio">
                 <h2>Short Bio</h2>
-                <p>Dr. Mohammad Razaur Shaon is a highly motivated transportation engineering researcher with extensive experience in applying statistical and machine learning techniques for complex transportation data analysis. His research focuses on connected and autonomous vehicles, crash analytics, and improving transportation safety and mobility.</p>
+                <p>Dr. Mohammad Razaur Shaon is a highly motivated transportation engineering researcher with extensive experience in applying statistical and machine learning techniques for complex transportation data analysis.</p>
             </div>
             <div class="section" id="education">
                 <h2>Education</h2>
@@ -125,6 +133,28 @@
                     <li>Ph.D. in Civil & Environmental Engineering, University of Wisconsin-Milwaukee (2019)</li>
                     <li>M.Sc. in Civil & Environmental Engineering, South Dakota State University (2015)</li>
                     <li>B.Sc. in Civil Engineering, Bangladesh University of Engineering and Technology (2012)</li>
+                </ul>
+            </div>
+            <div class="section" id="research">
+                <h2>Research Interests</h2>
+                <ul>
+                    <li>Highway Safety and Crash Modeling</li>
+                    <li>Machine Learning in Transportation</li>
+                    <li>Statistical and Econometric Modeling</li>
+                    <li>Intelligent Transportation Systems</li>
+                    <li>GIS and Spatial Data Analysis</li>
+                </ul>
+            </div>
+            <div class="section" id="experience">
+                <h2>Research Experience</h2>
+                <p>Assistant Research Professor, University of Tennessee Knoxville</p>
+                <p>Associate Research Scientist, University of Connecticut</p>
+            </div>
+            <div class="section" id="publications">
+                <h2>Publications</h2>
+                <ul>
+                    <li>Shaon, M.R.R., Zhao, S., Wang, K., & Jackson, E. (2023). Developing a Data-Driven Network Screening Procedure for Systemic Safety Approach.</li>
+                    <li>Luo, X., Li, X., Shaon, M.R.R., & Zhang, Y. (2023). Multi-lane-merging Strategy for Connected Automated Vehicles on Freeway Ramps.</li>
                 </ul>
             </div>
             <div class="section" id="contact">
