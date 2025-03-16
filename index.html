@@ -11,7 +11,6 @@
             padding: 0;
             display: flex;
             background-color: #f4f4f4;
-            flex-direction: column;
         }
         .top-image {
             width: 100%;
@@ -26,10 +25,10 @@
         }
         .main-container {
             display: flex;
-            justify-content: space-between;
+            width: 100%;
         }
         .sidebar {
-            width: 300px;
+            width: 320px;
             background-color: #2ecc71;
             color: white;
             padding: 20px;
@@ -37,13 +36,50 @@
             position: fixed;
             height: 100vh;
             top: 0;
-            right: 0;
+            left: 0;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .sidebar p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #27ae60;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #219150;
+        }
+        .sidebar .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .sidebar .social-icons a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
         .content {
-            margin-right: 320px;
+            margin-left: 350px;
             padding: 20px;
             max-width: 800px;
         }
@@ -63,6 +99,29 @@
         <img src="top-image.jpg" alt="Top Banner" style="width: 100%; max-height: 608px; object-fit: contain;">
     </div>
     <div class="main-container">
+        <div class="sidebar">
+            <div>
+                <img src="profile.jpg" alt="Mohammad Razaur Shaon">
+                <h2>Mohammad Razaur Rahman Shaon, Ph.D., PE, PTOE, RSP</h2>
+                <p>Research Assistant Professor</p>
+                <p>Center for Transportation Research</p>
+                <p>University of Tennessee-Knoxville</p>
+                <p>309 Conference Center Bldg.</p>
+                <p>Knoxville, TN 37996-4133</p>
+            </div>
+            <div>
+                <a href="#bio">Short Bio</a>
+                <a href="#education">Education</a>
+                <a href="#research">Research Interests</a>
+                <a href="#experience">Research Experience</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://scholar.google.com" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/mohammad-razaur-shaon/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
         <div class="content">
             <div class="section" id="bio">
                 <h2>Short Bio</h2>
@@ -97,12 +156,6 @@
                     <li>Shaon, M.R.R., Zhao, S., Wang, K., & Jackson, E. (2023). Developing a Data-Driven Network Screening Procedure for Systemic Safety Approach.</li>
                     <li>Luo, X., Li, X., Shaon, M.R.R., & Zhang, Y. (2023). Multi-lane-merging Strategy for Connected Automated Vehicles on Freeway Ramps.</li>
                 </ul>
-            </div>
-            <div class="section" id="contact">
-                <h2>Contact Me</h2>
-                <p>Email: <a href="mailto:mshaon@utk.edu">mshaon@utk.edu</a></p>
-                <p>GitHub: <a href="https://github.com/mrrshaon06" target="_blank">github.com/mrrshaon06</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammad-razaur-shaon/" target="_blank">LinkedIn Profile</a></p>
             </div>
         </div>
     </div>
