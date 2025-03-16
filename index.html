@@ -21,6 +21,7 @@
         }
         .main-container {
             display: flex;
+            justify-content: space-between;
         }
         .sidebar {
             width: 250px;
@@ -31,6 +32,7 @@
             position: fixed;
             height: 100vh;
             top: 250px;
+            right: 0;
         }
         .sidebar img {
             width: 120px;
@@ -59,7 +61,7 @@
             background-color: #219150;
         }
         .content {
-            margin-left: 270px;
+            margin-right: 270px;
             padding: 20px;
             max-width: 800px;
         }
@@ -76,16 +78,6 @@
 <body>
     <div class="top-image"></div>
     <div class="main-container">
-        <div class="sidebar">
-            <img src="profile.jpg" alt="Mohammad Razaur Shaon">
-            <h2>Mohammad Razaur Shaon, Ph.D.</h2>
-            <p>Assistant Research Professor</p>
-            <a href="#bio">Short Bio</a>
-            <a href="#education">Education</a>
-            <a href="#research">Research Interests</a>
-            <a href="#experience">Research Experience</a>
-            <a href="#publications">Publications</a>
-        </div>
         <div class="content">
             <div class="section" id="bio">
                 <h2>Short Bio</h2>
@@ -127,6 +119,16 @@
                 </ul>
                 <p><a href="https://www.linkedin.com/in/mohammad-razaur-shaon/" target="_blank">View Full List on LinkedIn</a></p>
             </div>
+        </div>
+        <div class="sidebar">
+            <img src="profile.jpg" alt="Mohammad Razaur Shaon">
+            <h2>Mohammad Razaur Shaon, Ph.D.</h2>
+            <p>Assistant Research Professor</p>
+            <a href="#bio">Short Bio</a>
+            <a href="#education">Education</a>
+            <a href="#research">Research Interests</a>
+            <a href="#experience">Research Experience</a>
+            <a href="#publications">Publications</a>
         </div>
     </div>
 </body>
